@@ -1,0 +1,216 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Indie Flower", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* header styles */
+
+.header {
+  background-color: #17c09c;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > h2 {
+  font-size: 1.5rem;
+  padding-left: 2rem;
+}
+
+.refresh-icon {
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.refresh-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Welcome Page Styles */
+
+.welcome-page {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.welcome-title {
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 10%;
+}
+
+.welcome-btn {
+  width: 200px;
+  height: 50px;
+  margin: 2rem;
+  border-radius: 10px;
+  border: none;
+  background: #ffb612;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.welcome-btn:hover {
+  border: 2px solid rgb(198, 136, 44);
+  transform: scale(1.05);
+}
+
+/* Main Section Styles */
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Scoreboard Styles */
+
+.score-display {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  align-items: center;
+  font-size: 3rem;
+  border: 4px solid black;
+  border-radius: 25px;
+  margin: 3rem;
+  margin-bottom: 0;
+  cursor: default;
+}
+
+.display-text {
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 1.5rem;
+}
+
+/* Result text styles */
+.result-text > p {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+/* Rock Paper Scissor Styles*/
+
+.option-section {
+  display: flex;
+  padding-top: 3rem;
+}
+
+.rock-img,
+.paper-img,
+.scissor-img {
+  width: 12rem;
+  height: 14rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.rock-img:hover,
+.paper-img:hover,
+.scissor-img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.rock-img {
+  background-color: rgb(66, 231, 16);
+  border: 2px solid rgb(28, 112, 3);
+  border-radius: 25px;
+}
+
+.paper-img {
+  background-color: #f4459d;
+  border: 2px solid #ad0d5d;
+  border-radius: 25px;
+}
+
+.scissor-img {
+  background-color: #4667f2;
+  border: 2px solid #0e31bb;
+  border-radius: 25px;
+}
+
+/* JS transition classes */
+
+.flash-green {
+  border: 4px solid rgb(66, 231, 16);
+  transition: 300ms;
+}
+.flash-red {
+  border: 4px solid rgb(255, 1, 0);
+  transition: 300ms;
+}
+.flash-amber {
+  border: 4px solid rgb(198, 136, 44);
+  transition: linear;
+}
+
+.invis {
+  pointer-events: none;
+  opacity: 0;
+}
+
+@media (max-width: 800px) {
+  .score-display {
+    font-size: 1.5rem;
+  }
+
+  .option-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: relative;
+    padding-top: 0;
+  }
+  .rock {
+    grid-column-end: 3;
+    position: relative;
+    right: 7rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .header > h2 {
+    font-size: 1rem;
+    padding-left: 2rem;
+  }
+
+  .score-display {
+    font-size: 1.1rem;
+  }
+
+  .option-section {
+    flex-direction: column;
+    padding-top: 0;
+    display: flex;
+  }
+
+  .result-text > p {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .rock {
+    position: initial;
+  }
+
+  .rock-img,
+  .paper-img,
+  .scissor-img {
+    width: 9rem;
+    height: 10rem;
+  }
+}
