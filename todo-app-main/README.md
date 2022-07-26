@@ -5,7 +5,7 @@ Using HTML, CSS and Vanilla Javascript
 
 Functions: <br>
 - Able to add named tasks to a list of todos.
-- Able to check complete and uncomplete of each task.
+- Able to check complete and incomplete of each task.
 - Can filter through tasks, for unfinished, finished, and all tasks.
 - Can delete a filter of tasks, such as completed tasks.
 - Added a light and dark mode via a click of a button.
