@@ -75,6 +75,7 @@ header {
 .input-item {
   border-radius: 5px;
   text-indent: 10px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 ul {
@@ -94,6 +95,7 @@ ul {
   margin: 0;
   text-align: start;
   border-bottom: none;
+  text-overflow: wrap;
 }
 
 .white {

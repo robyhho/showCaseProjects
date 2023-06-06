@@ -172,9 +172,9 @@ input {
 }
 
 .right-text {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: bold;
-  padding-top: 0.5rem;
+  padding-top: 0.5em;
 }
 
 /* Tip amount styles */
@@ -214,27 +214,79 @@ input {
   border: 1px solid white;
 }
 
-/* Attribution styles */
-
-.attribution,
-.attribution a {
-  font-size: 11px;
-}
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 /* Media Queries */
 
-@media screen and (min-width: 300px) and (max-width: 900px) {
+@media screen and (max-height: 999px) {
+  .logo {
+    padding: 0.5em;
+  }
+  .main-section {
+    height: fit-content;
+  }
+  .right-text {
+    font-size: 18px;
+  }
+  .amount-num {
+    font-size: 18px;
+  }
+
+  .main-section {
+    padding: 0;
+    height: fit-content;
+    display: flex;
+    margin: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .bill-section,
+  .tip-section,
+  .people-section {
+    padding: 0em 0.5em;
+  }
+  .tip-btn {
+    padding: 0.1em;
+  }
+  .tip-amount {
+    padding-top: 0;
+    align-items: center;
+  }
+  .right-side {
+    margin: 0.5em;
+  }
+}
+@media screen and (max-height: 700px) {
+  .logo {
+    display: none;
+  }
+
+  .main-section {
+    height: 100vh;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .right-side {
+    margin: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .tip-btn {
+    padding: 0em;
+  }
+  .reset {
+    padding: 0.3em;
+  }
+  .people-section {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 475px) and (max-width: 999px) {
   .main-section {
     width: 90%;
     height: fit-content;
     padding: 2em;
+    margin: 2em;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
   }
@@ -269,11 +321,5 @@ input {
   .reset {
     padding: 0.5rem 1rem;
     margin: 0;
-  }
-}
-
-@media (min-width: 1000px) {
-  .main-section {
-    width: 70%;
   }
 }
